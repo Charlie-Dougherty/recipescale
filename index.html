@@ -86,7 +86,29 @@
 
             .ingredient-header div:last-child {
                 width: auto;
-                'margin-right: 20px'
+                margin-right: 20px;
+            }   
+            .supplier-section {
+                margin: 20px 0;
+                padding: 20px;
+                background: #f8f8f8;
+            }
+
+            .supplier-row {
+                display: flex;
+                gap: 5px;
+                margin-bottom: 10px;
+                align-items: center;
+            }
+
+            .margin-alerts {
+                color: #d32f2f;
+                margin-bottom: 10px;
+            }
+
+            .price-history {
+                font-size: 12px;
+                color: #666;
             }   
     </style>
 </head>
@@ -124,5 +146,15 @@
     </div>
 
     <script src="recipe.js"></script>
+
+    <!-- Add this after your recipe calculator and before the analysis section -->
+    <div class="supplier-section">
+        <h2>Supplier Prices</h2>
+        <div id="supplier-prices"></div>
+        <button id="add-supplier-price">Add Ingredient Price</button>
+    </div>
+
+    <!-- Add a section for alerts -->
+    <div id="margin-alerts" class="margin-alerts"></div>
 </body>
 </html>
