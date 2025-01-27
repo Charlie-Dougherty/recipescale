@@ -1,0 +1,128 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Recipe Cost Calculator</title>
+    <style>
+        body {
+            font-family: serif;
+            padding: 20px;
+            margin: 0 auto;
+        }
+        
+        h1 {
+            font-size: 24px;
+            margin-bottom: 20px;
+        }
+
+        input {
+            border: 1px solid #ccc;
+            padding: 5px;
+            margin-right: 5px;
+        }
+
+        input[type="text"] {
+            width: 150px;
+        }
+
+        input[type="number"] {
+            width: 60px;
+        }
+
+        .ingredient-row {
+            margin-bottom: 10px;
+        }
+
+        .analysis {
+            background: #f8f8f8;
+            padding: 20px;
+            margin-top: 20px;
+        }
+
+        .analysis h2 {
+            font-size: 20px;
+            margin-top: 0;
+        }
+
+        button {
+            background: white;
+            border: 1px solid #ccc;
+            padding: 3px 8px;
+            margin-right: 5px;
+        }
+
+        #add-ingredient {
+            margin: 10px 0;
+            display: block;
+        }
+
+        .serving-controls {
+            margin: 15px 0;
+        }
+
+        .serving-controls label {
+            margin-right: 5px;
+        }
+
+        select {
+            padding: 5px;
+            margin-right: 5px;
+        }
+
+            .ingredient-header {
+                display: flex;
+                margin-bottom: 10px;
+                font-weight: bold;
+            }
+
+            .ingredient-header div {
+                width: 155px;
+                margin-right: 25px; /* Match input spacing */
+            }
+
+            .ingredient-header div:nth-child(2),
+            .ingredient-header div:nth-child(3) {
+                width: 60px;
+            }
+
+            .ingredient-header div:last-child {
+                width: auto;
+                'margin-right: 20px'
+            }   
+    </style>
+</head>
+<body>
+    <h1>Recipe Cost Calculator</h1>
+
+    <div class="ingredient-header">
+        <div>Ingredient</div>
+        <div>Quantity</div>
+        <div>Unit</div>
+        <div>Cost/Unit</div>
+       
+    </div>
+    
+    <div id="ingredients"></div>
+    
+    <button id="add-ingredient">Add Ingredient</button>
+
+    
+    <div class="serving-controls">
+        <label>Number of Servings:</label>
+        <input type="number" id="servings" value="1">
+    </div>
+    
+    <div class="serving-controls">
+        <label>Target Margin (%):</label>
+        <input type="number" id="margin" value="70">
+    </div>
+
+    <div class="analysis">
+        <h2>Cost Analysis</h2>
+        <p>Total Cost: $<span id="totalCost">0.00</span></p>
+        <p>Cost per Serving: $<span id="costPerServing">0.00</span></p>
+        <p>Suggested Price: $<span id="suggestedPrice">0.00</span></p>
+    </div>
+
+    <script src="recipe.js"></script>
+</body>
+</html>
